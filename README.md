@@ -3,6 +3,7 @@ Price data from the f1 fantasy game. This data is gatherd with the [F1FantasyScr
 
 The main file in this repository is [raw_data.csv](raw_data.csv) and **may be subject to changes**.
 The changes include but are not limited to: renaming, relocating, adding/removing/renaming columns.
+I'll try tho keep the updates daily.
 
 Every row represents an asset (driver/team) in a given moment in time.
 The data starts 31/03/2021 00:06:14 so the first days after the first race are not present.
