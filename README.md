@@ -16,10 +16,14 @@ Here is a small description of the file:
 | id                                | ID of the asset   | integer > 0|
 | name                              | Name of the asset | string |
 | price                             | Price of the asset in millions| float\* > 0 |
-| price_delta                       | Price diference since the first race in milions | float* |
+| price_delta_start                 | Price diference since the first race in milions | float* |
+| price_delta_race                  | Price diference since the last race in milions | float |
 | probability_price_up_percentage   | How close the driver is to increase 0.1 in price | integer [0, 100] |
 | probability_price_down_percentage | How close the driver is to decrease 0.1 in price | integer [0, 100] |
 | current_selection_percentage      | Percentage of players that own the driver | integer [0, 100] |
 | datetime                          | Date and time of the snapshot | YYYY-MM-DD HH:MM:SS[.ffff] |
 
 \* Altho the value is a float it's always a float with 1 decimal place. If multiplied by 10 can be seen as an int .
+
+I do not include a continuous sentiment variable because it is easy to calculate that with only the information of one line.
+`sentiment = price_delta_start * 10000 + probability_price_up_percentage - probability_price_down_percentage`
