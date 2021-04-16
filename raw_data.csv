@@ -1,4 +1,4 @@
-id,name,price,price_delta_start,price_delta_race,probability_price_up_percentage,probability_price_down_percentage,current_selection_percentage,current_selection_percentage_delta,datetime
+id,name,price,price_delta_season,price_delta_race,probability_price_up_percentage,probability_price_down_percentage,selection_percentage,selection_percentage_delta,datetime
 29,N. Mazepin,5.4,-0.1,-0.1,0,5,5,0,2021-03-31 00:06:14
 26,K. Raikkonen,9.6,0.0,0.0,0,85,15,0,2021-03-31 00:06:14
 4,Mercedes,38.0,0.0,0.0,0,93,12,0,2021-03-31 00:06:14
