@@ -1,4 +1,7 @@
-# F1FantasyData
+# F1FantasyData - Incomplete DATA
+
+**My raspberypi that was recording the data died, unfortunately this project is not going to be maintained for the rest of the season.**
+
 Price data from the F1 fantasy game. This data is gathered with the [F1FantasyScraper](https://github.com/EduardoFAFernandes/F1FantasyScraper)
 
 The main file in this repository is [raw_data.csv](raw_data.csv) and **may be subject to changes**.
