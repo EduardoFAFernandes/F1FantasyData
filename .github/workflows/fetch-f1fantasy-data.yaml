@@ -1,0 +1,34 @@
+name: fetch-f1fantasy-data
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  fetch-f1fantasy-data:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - uses: actions/checkout@v3
+        with:
+          path: data
+      
+      - uses: actions/checkout@v3
+        with:
+          repository: EduardoFAFernandes/F1FantasyScraper
+          path: scraper
+      
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+            
+      - run: pip install -r ./scraper/requirements.txt
+      
+      - run: python ./scraper/scraper.py -rf ./data/2022/prices.csv
+      
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Auto Price Update'
+          add: '2022/prices.csv'
+          cwd: './data/'
